@@ -1,0 +1,672 @@
+/* Classic Windows Theme (default) */
+/* =============================== */
+.context-menu-theme-default {
+	border:2px outset white;
+	background-color:#D4D0C8;
+}
+.context-menu-theme-default .context-menu-item {
+	text-align:left;
+	cursor:pointer;
+	padding:4px 28px 4px 16px;
+	color:black;
+	font-family:Tahoma,Arial;
+	font-size:11px;
+}
+.context-menu-theme-default .context-menu-separator {
+	margin:4px 2px;
+	font-size:0px;
+	border-top:1px solid #808080;
+	border-bottom:1px solid white;
+}
+.context-menu-theme-default .context-menu-item-disabled {
+	color:#808080;
+}
+.context-menu-theme-default .context-menu-item .context-menu-item-inner {
+	background:none no-repeat fixed 999px 999px; /* Make sure icons don't appear */
+}
+.context-menu-theme-default .context-menu-item-hover {
+	background-color:#0A246A;
+	color:white;
+}
+.context-menu-theme-default .context-menu-item-disabled-hover {
+	background-color:#0A246A;
+}
+
+/* Windows Vista Theme */
+/* =================== */
+.context-menu-theme-vista {
+	/* background:#FAFAFA url(images/cmenu-vista-bg.gif) repeat-y left top; */
+	/* border:1px solid #868686; */
+
+	background:#FAFAFA;
+	border:1px solid #868686;
+}
+.context-menu-theme-vista .context-menu-item {
+	text-align:left;
+	cursor:pointer;
+	color:black;
+	font-family:Tahoma,Arial;
+	font-size:13px;
+}
+.context-menu-theme-vista .context-menu-separator {
+	margin:0px 0px 0px 32px;
+	font-size:0px;
+	border-top:1px solid #C5C5C5;
+	border-bottom:1px solid #F5F5F5;
+}
+.context-menu-theme-vista .context-menu-item-hover {
+	/* background:transparent url(images/cmenu-human-menu-item-hover.gif) repeat-x left center; */
+	/* border:1px solid #D7D0B3; */
+
+	border:1px solid #FAFAFA;
+	background-color:#D7D0B3;
+}
+.context-menu-theme-vista .context-menu-item .context-menu-item-inner {
+	padding:4px 16px 4px 35px;
+	margin-left:1px;
+	background-color:none;
+	background-repeat:no-repeat;
+	background-position:3px center;
+	background-image:none;
+}
+.context-menu-theme-vista .context-menu-item-hover .context-menu-item-inner {
+	padding:3px 15px 3px 35px;
+	margin-left:0px;
+}
+.context-menu-theme-vista .context-menu-item-disabled {
+	color:#A7A7A7;
+}/* Base Elements */
+.ipc-baseContiner {
+	color:#ccc;
+	width:50%;
+	height:480px;
+	position:relative;
+	overflow:hidden;
+	background:#000;
+}
+
+.ipc-videoPlayerDiv {
+	color:#ccc;
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow:hidden;
+	background:#000;
+}
+
+.ipc-control {
+	left:0;
+	bottom:0;
+	width:100%;
+	height:28px;
+	z-index:5;
+	opacity: 0.75;
+
+	color:#ccc;
+	cursor: default;
+	display:none;
+	position:absolute;
+	background:#333;
+	
+	-ms-user-select: none;
+   user-select: none;	
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.ipc-btmControl {
+	clear:both;
+	background: #1F1F1F; 
+}
+
+.ipc-control div.ipc-controlBtn {
+	float:left;
+	width:24px;
+	height:24px;
+	cursor:pointer;
+}
+
+.ipc-control div.ipc-controlBtn-2 {
+	float:left;
+	width:24px;
+	height:24px;
+	cursor:pointer;
+}
+
+/* Buttons */
+
+.ipc-control div.ipc-btnPlay {
+	background-position: 0px 0px;
+	margin-right:4px;
+}
+
+.ipc-control div.ipc-btnPlay:hover, .ipc-control div.ipc-btnPlay:focus { 
+	background-position: 0px -24px;
+}
+
+.ipc-control div.ipc-paused {
+	background-position: -24px 0px;
+	margin-right:4px;
+}
+
+.ipc-control div.ipc-paused:hover, .ipc-control div.ipc-paused:focus { 
+	background-position: -24px -24px;
+}
+
+.ipc-control div.ipc-hdIcon {
+	background-position: -24px -96px;
+	display: none;
+	margin-left: 5px;
+	pointer-events: none;
+}
+
+.ipc-control div.ipc-btnFS {
+	background-position: 0px -48px;
+	float:right;
+}
+
+.ipc-control div.ipc-btnFS:hover, .ipc-control div.ipc-btnFS:focus { 
+	background-position: 0px -72px;
+}
+
+.ipc-control div.ipc-exitFS {
+	background-position: -24px -48px;
+	float:right;
+}
+
+.ipc-control div.ipc-exitFS:hover, .ipc-control div.ipc-exitFS:focus { 
+	background-position: -24px -72px;
+}
+
+.ipc-control div.ipc-disabledFS {
+	width:24px;
+	height:24px;
+	cursor:pointer;
+	background-position: -96px -96px;
+	float:right;
+}
+
+.ipc-control div.ipc-btnFit {
+	background-position: -48px -48px;
+	float:right;
+	margin-right: 4px;
+}
+
+.ipc-control div.ipc-btnFit:hover, .ipc-control div.ipc-btnFit:focus { 
+	background-position: -48px -72px;
+}
+
+.ipc-control div.ipc-exitFit {
+	background-position: -72px -48px;
+	float:right;
+}
+
+.ipc-control div.ipc-exitFit:hover, .ipc-control div.ipc-exitFit:focus { 
+	background-position: -72px -72px;
+}
+
+.ipc-control div.ipc-muted {
+	background-position: -48px 0px;
+	float:right;
+}
+
+.ipc-control div.ipc-muted:hover, .ipc-control div.ipc-muted:focus { 
+	background-position: -72px 0px;
+}
+
+.ipc-control div.ipc-sound {
+	background-position: -72px 0px;
+	float:right;
+}
+
+.ipc-control div.ipc-sound:hover, .ipc-control div.ipc-sound:focus { 
+	background-position: -48px 0px;
+}
+
+.ipc-control div.ipc-sound2 {
+	background-position: -96px 0px;
+	float:right;
+}
+
+.ipc-control div.ipc-sound2:hover, .ipc-control div.ipc-sound2:focus { 
+	background-position: -48px 0px;
+}
+
+.ipc-control div.ipc-snapShot {
+	background-position: -96px -48px;
+	float:right;
+	display: none;
+	margin-right: 4px;
+}
+
+.ipc-control div.ipc-snapShot:hover, .ipc-control div.ipc-snapShot:focus { 
+	background-position: -96px -72px;
+}
+
+.ipc-control div.ipc-btnReport {
+	background-position: -48px -96px;
+	float:right;
+	display: none;
+	margin-right: 4px;
+}
+
+.ipc-control div.ipc-btnReport:hover, .ipc-control div.ipc-btnReport:focus { 
+	background-position: -72px -96px;
+}
+
+.ipc-control div.ipc-btnDownload {
+	background-position: 0px 0px;
+	float:right;
+	display: none;
+	margin-right: 4px;
+}
+
+.ipc-control div.ipc-btnDownload:hover, .ipc-control div.ipc-btnDownload:focus { 
+	background-position: -24px 0px;
+}
+
+.ipc-bigPlayBase {
+	z-index:5;
+	display:block;
+	position:absolute;
+	background-repeat: no-repeat;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.ipc-control div.ipc-spdText{
+	border:none;
+	font-size:14px;
+	line-height:30px;
+	font-style:italic;
+}
+
+.ipc-control div.ipc-selected{
+	font-size:15px;
+	color:#ccc;
+}
+
+/* volume bar */
+
+.ipc-volume{
+	position:relative;
+	cursor:pointer;
+	width:70px;
+	height:8px;
+	float:right;
+	top:8px;
+	margin-right:10px;
+	background-color:#777;
+}
+
+.ipc-volume:hover, .ipc-volume:focus {
+	position:relative;
+	cursor:pointer;
+	width:70px;
+	height:8px;
+	float:right;
+	top:8px;
+	margin-right:10px;
+	background-color:#888;
+}
+
+.ipc-volumeBar{
+	display:block;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:#eee;
+	z-index:10;
+}
+
+.ipc-volumeBar:hover, .ipc-volumeBar:focus {
+	display:block;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:#fff;
+	z-index:10;
+}
+
+/* Live */
+
+.ipc-defaultFont {
+	color:#fff;
+	font-family:arial;
+}
+
+.ipc-liveText, .ipc-timeText {
+	float:left;
+	text-align:left;
+	font-size:11px;
+	line-height:25px;
+	display:block;	
+	font-weight:bold;
+	color:#fff;
+}
+
+/* Title */
+.ipc-titleText {
+	float:left;
+	text-align:left;
+	font-size:1em;
+	line-height:40px;
+	display:block;	
+	color:#fff;
+	padding-left:10px;
+	text-shadow: 2px 2px #000;
+}
+
+
+/* Loading */
+
+.ipc-loadingSpinnerContainer {
+	z-index:4;
+	display:none;
+	position:absolute;
+	background: rgba(34, 34, 34, 0.75);
+
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	border:1px solid;
+	border-color: rgba(68, 68, 68, 1.0);
+}
+
+.ipc-loadingSpinnerDefault {
+	z-index:5;
+	display:block;
+	width:100%;
+	height:100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center; 
+}
+
+/* Progress Bar */
+
+.ipc-progress {
+	width:100%;
+	height:3px;
+	position:relative;
+	float:left;
+	cursor:pointer;
+	background: #222;
+}
+
+.ipc-progress span {
+	top:0;
+	left:0;
+	height:100%;
+	display:block;
+	position:absolute;
+}
+
+.ipc-timeBar {
+	width:0;
+	z-index:10;
+	background: #f1a165;
+}
+
+.ipc-bufferBar {
+	width:0;
+	z-index:5;
+	background: #777;
+}
+
+/* Playback Speed */
+
+.ipc-playbackBtn {
+	width:40px;
+	float:right;
+	text-align:center;
+	font-size:12px;
+	line-height:25px;
+	display:block;	
+	font-weight:bold;
+	color:#fff;
+}
+
+.ipc-playbackSpeedsDiv {
+	z-index:5;
+	display:none;
+	position:absolute;
+	background: #333;
+	opacity: 0.75;
+}
+
+.ipc-playbacSpeedBtn {
+	width:50px;
+	height:30px;
+	float:bottom;
+	text-align:center;
+	font-size:14px;
+	line-height:30px;
+	display:block;	
+	font-weight:bold;
+	color:#fff;
+	cursor:pointer;
+}
+
+.ipc-playbacSpeedBtn:hover, .ipc-playbacSpeedBtn:focus {
+	width:50px;
+	height:30px;
+	float:bottom;
+	text-align:center;
+	font-size:14px;
+	line-height:30px;
+	display:block;	
+	font-weight:bold;
+	color:#fff;
+	cursor:pointer;
+	background: #777;
+}
+
+.ipc-unmuteButton {
+	margin: auto;
+	display:block;	
+	padding: 10px;
+	position:absolute;
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgba(64,64,64,0.5);	
+	border-radius: 5px;
+	background-color: rgba(32,32,32,0.75);
+
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.ipc-unmuteButton:hover, .ipc-unmuteButton:focus {
+	border-color: rgba(64,64,64,1.0);	
+	background-color: rgba(32,32,32,1.0);
+}
+
+.ipc-unmuteImage {
+	margin: auto;
+	display:block;	
+	width: 24px;
+	height: 24px;
+	background-position: -96px 0px;
+}
+
+.ipc-unmuteText {
+	color:#fff;
+	font-size:0.80em;
+	text-align:center;
+	font-weight:bold;
+	font-family:arial;
+	text-shadow: 1px 1px #444;	
+}
+
+.ipc-noselect {
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ipc-alreadyViewText {
+	color:#fff;
+	font-weight:bold;
+	font-family:arial;
+	text-shadow: 1px 1px #222;	
+	text-align:center;
+	white-space: nowrap;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+/* video {
+  object-fit: fill;
+} -*/.ipc-meter { 
+	height: 3px;
+	position: relative;
+}
+
+.ipc-meterMobile { 
+	height: 3px;
+	position: relative;
+}
+
+.ipc-meter > span, .ipc-meterMobile > span {
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+
+.ipc-stripes > span {
+	content: "";
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+	z-index: 1;
+	-webkit-background-size: 50px 50px;
+	-moz-background-size: 50px 50px;
+	-webkit-animation: move 2s linear infinite;
+	overflow: hidden;
+}
+
+@-webkit-keyframes move {
+	0% {
+	   background-position: 0 0;
+	}
+	100% {
+	   background-position: 50px 50px;
+	}
+}/**
+ * gemini-scrollbar
+ * @version 1.5.2
+ * @link http://noeldelgado.github.io/gemini-scrollbar/
+ * @license MIT
+ */
+
+/* disable selection while dragging */
+.gm-scrollbar-disable-selection {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* fallback for native floating scrollbars */
+.gm-prevented {
+  -webkit-overflow-scrolling: touch;
+}
+.gm-prevented > .gm-scrollbar {
+  display: none;
+}
+
+/* actual gemini-scrollbar styles */
+.gm-scrollbar-container {
+  position: relative;
+  overflow: hidden!important;
+  width: 100%;
+  height: 100%;
+}
+
+.gm-scrollbar {
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  z-index: 1;
+  border-radius: 3px;
+}
+
+.gm-scrollbar.-vertical {
+  width: 4px;
+  top: 4px;
+}
+
+.gm-scrollbar.-horizontal {
+  height: 6px;
+  left: 2px;
+}
+
+.gm-scrollbar .thumb {
+  position: relative;
+  display: block;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  border-radius: inherit;
+  background-color: rgba(128, 128, 128, .5);
+  transform: translate3d(0,0,0);
+}
+
+.gm-scrollbar .thumb:hover,
+.gm-scrollbar .thumb:active {
+  background-color: rgba(128, 128, 128, .75);
+}
+
+.gm-scrollbar.-vertical .thumb {
+  width: 100%;
+}
+
+.gm-scrollbar.-horizontal .thumb {
+  height: 100%;
+}
+
+.gm-scrollbar-container .gm-scroll-view {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  transform: translate3d(0,0,0);
+  -webkit-overflow-scrolling: touch;
+}
+
+/* @option: autoshow */
+.gm-scrollbar-container.gm-autoshow .gm-scrollbar {
+  opacity: 0;
+  transition: opacity 120ms ease-out;
+}
+.gm-scrollbar-container.gm-autoshow:hover > .gm-scrollbar,
+.gm-scrollbar-container.gm-autoshow:active > .gm-scrollbar,
+.gm-scrollbar-container.gm-autoshow:focus > .gm-scrollbar {
+  opacity: 1;
+  transition: opacity 340ms ease-out;
+}
+
+.gm-resize-trigger {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+}

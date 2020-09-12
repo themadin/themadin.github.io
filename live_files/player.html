@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0062)https://g2.ipcamlive.com/player/player.php?alias=5f5363288b99d -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Live video stream</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">		  
+        <link rel="shortcut icon" href="https://g2.ipcamlive.com/tpls2/img/ipcamlive_favicon_128.png">
+
+        <script type="text/javascript" src="./jquery-3.min.js.download"> </script>
+		<script type="text/javascript" src="./ipcamliveplayer.min.js.download"> </script>
+			
+		<script type="text/javascript">
+			function inIframe () {
+    			try {
+        			return window.self !== window.top;
+    			} catch (e) {
+        			return true;
+    			}
+			}
+
+			var serverhost = 'http://g2.ipcamlive.com/';
+
+			var alias = '5f5363288b99d';
+			var servicetype = 'P';
+			var available = 1;
+			var address = 'http://s34.ipcamlive.com/';
+			var streamid = '225f545c2f5a64660';
+			var token = '5b8f504b';
+
+			var logoenabled = 1;
+			var logofilename = 'ipcamlive.png';
+			var logopos = 'BL';
+
+			var domainlockenabled  = 0;
+
+			var websocketenabled = 0;
+			var websocketport = '40048';
+
+			var rtcsupport = 1;
+
+			ipcamliveHostManager.setHostURL(serverhost);
+									
+			$(window).on("load", function() {	
+				if (domainlockenabled) {
+					if (!inIframe()) {
+						return;
+					}
+				}
+
+				var width = $(window).width();
+				var height = $(window).height(); 
+				$('#mediaplaybackdiv').width(width).height(height);
+				// console.log("LOAD: " + width + "x" + height);
+
+				var params = {};
+				params["iframemode"] = 1;
+				params["autoplay"] = 0;
+				params["audioenabled"] = 0;
+				params["timelapseenabledoncamera"] = 0;
+				params["timelapseplayerenabled"] = 1;
+				params["disableframecapture"] = 0;
+				params["disabledownloadbutton"] = 0;		
+				params["disablereportbutton"] = 0;		
+				params["timeshiftenabled"] = 0;				
+				params["skin"] = '';		
+		    	 
+				if (logoenabled) {
+					params["logo"] = ipcamliveHostManager.getHostURL('resources/logos/' + logofilename);
+					params["logopos"] = ipcamlivehelper.getPosByID(logopos);				
+				}
+	
+				if (websocketenabled)
+					params["websocketenabled"] = 1;	
+
+				if (rtcsupport)
+					params["rtcsupport"] = 1;	
+
+				ipcamliveplayer.setToken(token);
+				if (available) {
+					ipcamliveplayer.embedOnline("mediaplaybackdiv", alias, streamid, servicetype, address, websocketport, params);
+				} else {
+					ipcamliveplayer.embed("mediaplaybackdiv", alias, params);
+				}				
+			});	
+
+			$(window).resize(function() {
+				var width = $(window).width();
+				var height = $(window).height(); 
+				
+				$('#mediaplaybackdiv').width(width).height(height);
+				ipcamliveplayer.resize();
+			});
+					
+			var safariMobile = is.safari() && (is.iphone() || is.ipod() || is.ipad());
+			if (safariMobile) {					
+				window.addEventListener('orientationchange', function() {
+					$('#mediaplaybackdiv').width(320).height(240);
+					window.setTimeout(function() {
+						var width = $(window).width();
+						var height = $(window).height(); 
+				
+						$('#mediaplaybackdiv').width(width).height(height);
+						ipcamliveplayer.resize();
+					}, 300);
+				});
+			}
+        </script>
+    <link rel="stylesheet" type="text/css" href="./ipcamliveplayer-4.css"><script src="./hls.min-2.js.download" type="text/javascript"></script></head>
+    <body style="margin: 0px; border: 0px; padding: 0px; overflow: hidden"> 
+		<div id="mediaplaybackdiv" style="width: 800px; height: 450px;"><div id="mediaplaybackdiv_ipc_ic" style="width:100%; height:100%; position:relative; background:#000; z-index:1; overflow:hidden;"><video id="mediaplaybackdiv_videoplayer" muted="" preload="none" style="width: 100%; height: 100%; background-color: rgb(0, 0, 0); display: block; object-fit: fill;" src="blob:https://g2.ipcamlive.com/d5c7e63b-0b4d-4318-8960-55661de36447" poster="https://s34.ipcamlive.com/streams/225f545c2f5a64660/snapshot.jpg">Your browser does not capable to play this content.</video><div id="mediaplaybackdiv_ipc_ic_bigPlay" class="ipc-bigPlayBase" style="background-image: url(&quot;https://g2.ipcamlive.com/player/html5player/images-2/orange/bigplay.png&quot;); opacity: 1; left: 350px; top: 175px; width: 100px; height: 100px; background-size: 200px 100px; background-position: 0px 0px;"></div><div id="mediaplaybackdiv_ipc_ic_control" class="ipc-control" style="opacity: 0.75; background-color: rgb(31, 31, 31); display: block; bottom: -28px;"><div id="mediaplaybackdiv_ipc_ic_progressDiv" class="ipc-meter ipc-stripes" style="background-color: rgb(255, 159, 46);"><span style="width: 100%; background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0.25, rgba(243, 109, 10, 0.5)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(243, 109, 10, 0.5)), color-stop(0.75, rgba(243, 109, 10, 0.5)), color-stop(0.75, transparent), to(transparent));"></span></div><div id="mediaplaybackdiv_ipc_ic_btmControl" class="ipc-btmControl"><div id="mediaplaybackdiv_ipc_ic_btnPlay" class="ipc-btnPlay ipc-controlBtn" title="Play/Pause video" style="background-image: url(&quot;https://g2.ipcamlive.com/player/html5player/images-2/orange/base_image_1.png&quot;); background-size: 128px 128px;"></div><div id="mediaplaybackdiv_ipc_ic_btnFS" class="ipc-btnFS ipc-controlBtn" title="Toggle full screen" style="background-image: url(&quot;https://g2.ipcamlive.com/player/html5player/images-2/orange/base_image_1.png&quot;); background-size: 128px 128px;"></div><div id="mediaplaybackdiv_ipc_ic_btnFit" class="ipc-btnFit ipc-controlBtn ipc-exitFit" title="Toggle video fit mode" style="background-image: url(&quot;https://g2.ipcamlive.com/player/html5player/images-2/orange/base_image_1.png&quot;); background-size: 128px 128px; display: none;"></div><div id="mediaplaybackdiv_ipc_ic_snapShot" class="ipc-snapShot ipc-controlBtn" title="Download snapshot image" style="background-image: url(&quot;https://g2.ipcamlive.com/player/html5player/images-2/orange/base_image_1.png&quot;); background-size: 128px 128px; display: block;"></div><div id="mediaplaybackdiv_ipc_ic_btnReport" class="ipc-btnReport ipc-controlBtn" title="Report inappropriate content" style="background-image: url(&quot;https://g2.ipcamlive.com/player/html5player/images-2/orange/base_image_1.png&quot;); background-size: 128px 128px; display: block;"></div></div><div id="mediaplaybackdiv_ipc_ic_liveText" class="ipc-liveText ipc-defaultFont" title="LIVE" style="color: rgb(255, 255, 255); font-family: arial;"></div><div id="mediaplaybackdiv_ipc_ic_wsText" class="ipc-liveText ipc-defaultFont" title="Using WebSocket" style="display: none; color: rgb(255, 255, 255); font-family: arial;">-WS</div><div id="mediaplaybackdiv_ipc_ic_hdIcon" class="ipc-hdIcon ipc-controlBtn" title="HD Stream"></div></div><div id="mediaplaybackdiv_ipc_ic_loadingSpinnerContainer" class="ipc-loadingSpinnerContainer" style="left: 325px; top: 191.667px; width: 150px; height: 66.6667px;"><div id="mediaplaybackdiv_ipc_ic_loadingSpinnerDefault" class="ipc-loadingSpinnerDefault" style="background-image: url(&quot;https://g2.ipcamlive.com/player/html5player/images-2/orange/buffering.gif&quot;);"></div></div></div></div>
+    
+
+
+<table cellspacing="0" cellpadding="0" style="display: none;"><tr><td><div class="context-menu context-menu-theme-vista"><div class="context-menu-item " title=""><div class="context-menu-item-inner" style="">ipcamlive.com</div></div><div class="context-menu-separator"></div><div class="context-menu-item  context-menu-item-disabled" title=""><div class="context-menu-item-inner" style="">IPCamLive HTML5 Player (MSE)</div></div><div class="context-menu-item  context-menu-item-disabled" title=""><div class="context-menu-item-inner" style="">Live Streaming for IP Cameras</div></div><div class="context-menu-separator"></div><div class="context-menu-item " title=""><div class="context-menu-item-inner" style="">Report inappropriate content</div></div></div></td></tr></table><div class="context-menu-shadow" style="display: none; position: absolute; z-index: 9998; opacity: 0.2; background-color: black;"></div></body></html>
